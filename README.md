@@ -1,6 +1,7 @@
 Helphul Javascript Methods
 
-1. Local Storage Decorator
+1. Local Storage Decorator:
+
 function storage (...args) {
    if (args.length === 1) {
        return window.localStorage.getItem(args[0])
