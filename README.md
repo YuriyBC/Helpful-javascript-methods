@@ -1,4 +1,5 @@
 Helphul Javascript Methods
+===============
 
 **1. Local Storage Decorator:**
 ```
