@@ -26,4 +26,9 @@ function calculateNextId (arr) {
     return id
 }
 ```
-
+**3. Check for IE browser:**
+```
+function isIeBrowser () {
+  return /MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1
+}
+```
