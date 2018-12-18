@@ -2,7 +2,7 @@ Helphul Javascript Methods
 ===============
 
 **1. Local Storage Decorator:**
-`
+```
 function storage (...args) {
    if (args.length === 1) {
        return window.localStorage.getItem(args[0])
@@ -10,7 +10,7 @@ function storage (...args) {
        return window.localStorage.setItem(args[0], args[1])
    }
 }
-`
+```
 **2. Calculate next id of array:**
 ```
 function calculateNextId (arr) {
