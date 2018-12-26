@@ -287,7 +287,7 @@ isImageAdressValid (src) {
         };
     });
 }
-
+```
 
 Sass functions (not js, but anyway)
 ===============
