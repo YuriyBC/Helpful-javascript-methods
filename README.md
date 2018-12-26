@@ -313,6 +313,30 @@ function debounce(func, wait, immediate) {
    window.addEventListener('resize', myEfficientFn);
 ```
 
+**6.  Debounce function:**
+```
+function once(fn, context) { 
+	var result;
+    
+	return function() { 
+		if(fn) {
+			result = fn.apply(context || this, arguments);
+			fn = null;
+		}
+        
+		return result;
+	};
+}
+ 
+// Example
+var canOnlyFireOnce = once(function() {
+	console.log('Запущено!');
+});
+ 
+canOnlyFireOnce(); // "Working"
+canOnlyFireOnce(); // Not working
+```
+
 Sass functions (not js, but anyway)
 ===============
 
