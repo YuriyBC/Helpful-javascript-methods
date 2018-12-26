@@ -270,6 +270,24 @@ function getValidationStatus (dataType, formValue) {
     return status;
 }
 ```
+**5. Check is img path exists:**
+```
+/// example: isImageAdressValid(src).then(() => {/*alright*/}).catch(() => {/*not alright*/});
+
+isImageAdressValid (src) {
+    const newImage = document.createElement('img');
+    newImage.style.visibility = 'hidden';
+    newImage.src = src;
+    return new Promise(function (resolve, reject) {
+        newImage.onload = function () {
+            resolve()
+        };
+        newImage.onerror = function () {
+            reject ()
+        };
+    });
+}
+
 
 Sass functions (not js, but anyway)
 ===============
