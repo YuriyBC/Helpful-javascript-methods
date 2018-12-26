@@ -313,7 +313,7 @@ function debounce(func, wait, immediate) {
    window.addEventListener('resize', myEfficientFn);
 ```
 
-**6.  Debounce function:**
+**7.  Once function:**
 ```
 function once(fn, context) { 
 	var result;
@@ -335,6 +335,35 @@ var canOnlyFireOnce = once(function() {
  
 canOnlyFireOnce(); // "Working"
 canOnlyFireOnce(); // Not working
+```
+
+**8.  Throttle function:**
+```
+const throttle = (func, limit) => {
+let lastFunc
+let lastRan
+return function() {
+    const context = this
+    const args = arguments
+    if (!lastRan) {
+	func.apply(context, args)
+	lastRan = Date.now()
+    } else {
+	clearTimeout(lastFunc)
+	lastFunc = setTimeout(function() {
+	    if ((Date.now() - lastRan) >= limit) {
+		func.apply(context, args)
+		lastRan = Date.now()
+	    }
+	}, limit - (Date.now() - lastRan))
+    }
+}
+}
+
+var myEfficientFn = throttle(function() {
+console.log('resize')
+}, 1050);
+window.addEventListener('resize', myEfficientFn);
 ```
 
 Sass functions (not js, but anyway)
