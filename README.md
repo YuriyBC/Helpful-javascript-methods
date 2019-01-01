@@ -366,7 +366,7 @@ console.log('resize')
 window.addEventListener('resize', myEfficientFn);
 ```
 
-**8.  Throttle function:**
+**9.  Convert rgb(a) to hex color code:**
 ```
 function rgb2hex(rgb){
     const color = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
