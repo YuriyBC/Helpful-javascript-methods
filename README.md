@@ -1,4 +1,4 @@
-Helphul Javascript Methods
+Helpful Javascript Methods
 ===============
 
 **1. Local Storage Decorator:**
